@@ -1,0 +1,620 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Elysian Letterbook</title>
+
+    <!-- CSS DESIGN -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         MAIN BOOK CONTAINER
+    ========================================== -->
+
+    <main class="book-container">
+
+        <div class="book">
+
+
+            <!-- =================================
+                 PAGE 1: COVER
+            ================================== -->
+
+            <section class="page active" id="page-1">
+
+                <div class="page-content cover-page">
+
+                    <!-- IMAGE PLACEHOLDER: COVER FLOWER -->
+                    <div class="image-placeholder cover-flower">
+                        <!-- Add cover PNG here later -->
+                    </div>
+
+
+                    <p class="small-heading">
+                        A little something, just for you
+                    </p>
+
+
+                    <h1>
+                        The Elysian
+                        <br>
+                        Letterbook
+                    </h1>
+
+
+                    <p class="cover-description">
+                        A small collection of thoughts,
+                        written with a little courage.
+                    </p>
+
+
+                    <div class="cover-decoration">
+                        ✿
+                    </div>
+
+
+                    <button class="next-button" onclick="nextPage()">
+                        Open the book
+                    </button>
+
+
+                    <p class="page-number">
+                        A little story begins
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PAGE 2: THE BEGINNING
+            ================================== -->
+
+            <section class="page" id="page-2">
+
+                <div class="page-content">
+
+
+                    <p class="small-heading">
+                        Chapter I
+                    </p>
+
+
+                    <h2>
+                        A little introduction
+                    </h2>
+
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="image-placeholder chapter-image">
+                        <!-- Add a flower or decorative PNG here later -->
+                    </div>
+
+
+                    <p class="letter-text">
+                        Hello.
+                    </p>
+
+
+                    <p class="letter-text">
+                        I wanted to write something a little different
+                        instead of simply sending another message.
+                    </p>
+
+
+                    <p class="letter-text">
+                        So I made this little book.
+                    </p>
+
+
+                    <p class="letter-text">
+                        And I suppose this is where my story begins.
+                    </p>
+
+
+                    <div class="page-navigation">
+
+                        <button class="back-button" onclick="previousPage()">
+                            Previous
+                        </button>
+
+                        <button class="next-button" onclick="nextPage()">
+                            Next
+                        </button>
+
+                    </div>
+
+
+                    <p class="page-number">
+                        01
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PAGE 3: ELYSIA
+            ================================== -->
+
+            <section class="page" id="page-3">
+
+                <div class="page-content">
+
+
+                    <p class="small-heading">
+                        Chapter II
+                    </p>
+
+
+                    <h2>
+                        A beautiful coincidence
+                    </h2>
+
+
+                    <!-- IMAGE PLACEHOLDER: ELYSIA -->
+                    <div class="image-placeholder elysia-image">
+                        <!-- Add Elysia cosplay PNG here later -->
+                    </div>
+
+
+                    <p class="letter-text">
+                        Somewhere along the way,
+                        I came across your cosplay.
+                    </p>
+
+
+                    <p class="letter-text">
+                        And honestly, Elysia was what first
+                        caught my attention.
+                    </p>
+
+
+                    <p class="letter-text">
+                        There was something about seeing
+                        a character I already admired
+                        brought to life.
+            </p>
+
+
+                    <p class="letter-text">
+                        It made me curious enough
+                        to stay a little longer.
+                    </p>
+
+
+                    <div class="page-navigation">
+
+                        <button class="back-button" onclick="previousPage()">
+                            Previous
+                        </button>
+
+                        <button class="next-button" onclick="nextPage()">
+                            Next
+                        </button>
+
+                    </div>
+
+
+                    <p class="page-number">
+                        02
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PAGE 4: THE PERSON
+            ================================== -->
+
+            <section class="page" id="page-4">
+
+                <div class="page-content">
+
+
+                    <p class="small-heading">
+                        Chapter III
+                    </p>
+
+
+                    <h2>
+                        Beyond the cosplay
+                    </h2>
+
+
+                    <!-- IMAGE PLACEHOLDER: FLOWERS -->
+                    <div class="image-placeholder flower-decoration">
+                        <!-- Add flower PNG here later -->
+                    </div>
+
+
+                    <p class="letter-text">
+                        But after a while,
+                        I realized something.
+                    </p>
+
+
+                    <p class="letter-text">
+                        It wasn't just the character
+                        that made me curious.
+            </p>
+
+
+                    <p class="letter-text">
+                        I started wondering about
+                        the person behind the cosplay.
+            </p>
+
+
+                    <p class="letter-text">
+                        The person with her own stories,
+                        interests, little habits,
+                        and dreams.
+            </p>
+
+
+                    <p class="letter-text">
+                        And I found myself wanting
+                        to know more about you.
+            </p>
+
+
+                    <div class="page-navigation">
+
+                        <button class="back-button" onclick="previousPage()">
+                            Previous
+                        </button>
+
+                        <button class="next-button" onclick="nextPage()">
+                            Next
+                        </button>
+
+                    </div>
+
+
+                    <p class="page-number">
+                        03
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PAGE 5: HONEST THOUGHTS
+            ================================== -->
+
+            <section class="page" id="page-5">
+
+                <div class="page-content">
+
+
+                    <p class="small-heading">
+                        Chapter IV
+                    </p>
+
+
+                    <h2>
+                        A little honesty
+                    </h2>
+
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="image-placeholder honesty-image">
+                        <!-- Add a decorative PNG here later -->
+                    </div>
+
+
+                    <p class="letter-text">
+                        I think you're really lovely.
+            </p>
+
+
+                    <p class="letter-text">
+                        And somewhere between admiring
+                        your work and becoming curious
+                        about you,
+                        I realized that my interest
+                        had become something more.
+            </p>
+
+
+                    <p class="letter-text">
+                        I didn't want to pretend
+                        that I hadn't noticed.
+            </p>
+
+
+                    <p class="letter-text">
+                        So I thought I'd be honest
+                        about it.
+            </p>
+
+
+                    <div class="page-navigation">
+
+                        <button class="back-button" onclick="previousPage()">
+                            Previous
+                        </button>
+
+                        <button class="next-button" onclick="nextPage()">
+                            Next
+                        </button>
+
+                    </div>
+
+
+                    <p class="page-number">
+                        04
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PAGE 6: THE INVITATION
+            ================================== -->
+
+            <section class="page" id="page-6">
+
+                <div class="page-content">
+
+
+                    <p class="small-heading">
+                        Chapter V
+                    </p>
+
+
+                    <h2>
+                        A small question
+                    </h2>
+
+
+                    <!-- IMAGE PLACEHOLDER -->
+                    <div class="image-placeholder invitation-image">
+                        <!-- Add a flower PNG here later -->
+                    </div>
+
+
+                    <p class="letter-text">
+                        I don't know where this might lead.
+            </p>
+
+
+                    <p class="letter-text">
+                        And I don't want to make
+                        any assumptions about you.
+            </p>
+
+
+                    <p class="letter-text">
+                        But if you're comfortable with it,
+                        I'd really like the chance
+                        to get to know you.
+            </p>
+
+
+                    <p class="letter-text">
+                        Maybe we could talk,
+                        share our interests,
+                        and see where things go.
+            </p>
+
+
+                    <p class="letter-text">
+                        No expectations.
+                        Just a genuine invitation.
+            </p>
+
+
+                    <div class="page-navigation">
+
+                        <button class="back-button" onclick="previousPage()">
+                            Previous
+                        </button>
+
+                        <button class="next-button" onclick="nextPage()">
+                            Next
+                        </button>
+
+                    </div>
+
+
+                    <p class="page-number">
+                        05
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PAGE 7: FINAL LETTER
+            ================================== -->
+
+            <section class="page" id="page-7">
+
+                <div class="page-content final-page">
+
+
+                    <p class="small-heading">
+                        The final page
+                    </p>
+
+
+                    <h2>
+                        A letter from me
+                    </h2>
+
+
+                    <!-- IMAGE PLACEHOLDER: FINAL FLOWER -->
+                    <div class="image-placeholder final-flower">
+                        <!-- Add your final flower PNG here later -->
+                    </div>
+
+
+                    <p class="letter-text">
+                        Thank you for taking the time
+                        to read this little book.
+            </p>
+
+
+                    <p class="letter-text">
+                        I know this might be unexpected,
+                        and I hope it doesn't make
+                        things uncomfortable.
+            </p>
+
+
+                    <p class="letter-text">
+                        I simply wanted to tell you
+                        how I feel,
+                        and ask if you'd be open
+                        to getting to know me.
+            </p>
+
+
+                    <p class="letter-text">
+                        Whatever your answer is,
+                        I'll respect it.
+            </p>
+
+
+                    <p class="letter-text">
+                        And either way,
+                        I'm glad I got to admire
+                        your beautiful work.
+            </p>
+
+
+                    <div class="signature">
+
+                        With sincerity,
+
+                        <br>
+
+                        <span>
+                            Someone who wanted to say hello
+                        </span>
+
+                    </div>
+
+
+                    
+
+<!-- RESPONSE OPTIONS -->
+
+<div class="response-section" id="response-section">
+
+    <p class="response-question">
+        Would you be open to getting to know me?
+    </p>
+
+    <button
+        class="response-button"
+        id="yes-button"
+        onclick="chooseResponse('yes')">
+
+        I'd like that ♡
+
+    </button>
+
+    <button
+        class="response-button decline-button"
+        id="no-button"
+        onclick="chooseResponse('no')">
+
+        I don't think so
+
+    </button>
+
+</div>
+
+
+<!-- RESPONSE MESSAGE -->
+
+<div
+    id="response-message"
+    class="response-message"
+    aria-live="polite">
+
+</div>
+
+
+<!-- FINAL NAVIGATION -->
+
+<div class="page-navigation">
+
+    <button
+        class="back-button"
+        onclick="previousPage()">
+
+        Previous
+
+    </button>
+
+    <button
+        class="restart-button"
+        onclick="restartBook()">
+
+        Read again
+
+    </button>
+
+    <button
+        class="exit-button"
+        onclick="exitBook()">
+
+        Exit book
+
+    </button>
+
+</div>
+
+
+
+        <!-- =====================================
+             BOOK FOOTER
+        ====================================== -->
+
+        <footer class="book-footer">
+
+            <p>
+                Written with a little courage ♡
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
