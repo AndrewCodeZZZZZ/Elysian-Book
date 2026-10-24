@@ -1051,3 +1051,41 @@ button {
         animation: none;
     }
 }
+
+
+/* Fix the cosplay images on Pages 5 and 6 */
+.honesty-image,
+.invitation-image {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin: 20px auto 30px;
+    overflow: visible;
+}
+
+.honesty-image img,
+.invitation-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+    .honesty-image,
+    .invitation-image {
+        height: auto;
+        max-width: 100%;
+        margin: 15px auto 20px;
+        overflow: visible;
+    }
+
+    .honesty-image img,
+    .invitation-image img {
+        width: 100%;
+        height: auto;
+    }
+}
