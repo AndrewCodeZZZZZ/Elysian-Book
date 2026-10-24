@@ -201,60 +201,44 @@ h2 {
 }
 
 
+
 /* =====================================================
    8. IMAGE PLACEHOLDERS
 ===================================================== */
 
-/*
-   These areas are intentionally empty.
-
-   Later, you can place PNG images inside them.
-
-   We will adjust the sizes after you find your resources.
-*/
-
 .image-placeholder {
     position: relative;
-
     width: 100%;
-
     max-width: 320px;
 
-    height: 180px;
-
+    /* Let the image determine the height */
+    height: auto;
     margin: 20px auto 30px;
 
     overflow: hidden;
-
     background-color: transparent;
 }
 
-
-/* Images inside placeholders: show the entire image without cropping */
+/* Images inside placeholders */
 .image-placeholder img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+
+    /* Preserve the original image proportions */
     object-fit: contain;
     object-position: center;
 }
 
-
 /* Cover image area */
-
 .cover-flower {
     width: 220px;
-
-    height: 150px;
-
+    height: auto;
     margin-top: 0;
     margin-bottom: 35px;
 }
 
-
-
 /* Chapter illustrations */
-
 .chapter-image {
     width: 100%;
     max-width: 400px;
@@ -271,33 +255,24 @@ h2 {
     object-position: center;
 }
 
-
-
 /* Elysia cosplay image */
-
 .elysia-image {
     max-width: 340px;
-
-    height: 210px;
+    height: auto;
 }
 
-
 /* Flower decorations */
-
 .flower-decoration {
     max-width: 250px;
-
     height: 140px;
 }
 
-
 /* Final page illustration */
-
 .final-flower {
     max-width: 230px;
-
     height: 150px;
 }
+
 
 
 /* =====================================================
