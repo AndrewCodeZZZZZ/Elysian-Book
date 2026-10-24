@@ -1,4 +1,3 @@
-
 /* =====================================================
    THE ELYSIAN LETTERBOOK
 ===================================================== */
@@ -33,7 +32,6 @@ function showPage(pageIndex) {
     if (pageIndex < 0 || pageIndex >= totalPages) {
         return;
     }
-
 
     // Hide all pages.
 
@@ -111,9 +109,8 @@ function restartBook() {
 
 
 /* =====================================================
-   8. HANDLE RESPONSE
+   7. HANDLE RESPONSE
 ===================================================== */
-
 
 function chooseResponse(choice) {
 
@@ -122,6 +119,9 @@ function chooseResponse(choice) {
     if (responseSelected) {
         return;
     }
+
+
+    // Find the response elements.
 
     const responseMessage = document.getElementById(
         "response-message"
@@ -135,87 +135,80 @@ function chooseResponse(choice) {
         "no-button"
     );
 
+
+    // Make sure the elements exist.
+
     if (!responseMessage || !yesButton || !noButton) {
         return;
     }
+
 
     // Lock the response buttons.
 
     responseSelected = true;
 
     yesButton.disabled = true;
+
     noButton.disabled = true;
 
-    // Show a different message for each choice.
+
+    // YES RESPONSE
 
     if (choice === "yes") {
 
         responseMessage.innerHTML = `
-            <p>
-                If you'd be open to it, I'd be really happy
-                to hear from you.
-            </p>
+            <p>If you'd be open to it, I'd be really happy to hear from you.</p>
 
-            <p>
-                Feel free to message me on TikTok whenever
-                you're comfortable. I'd love to hear your
-                thoughts, talk with you, and get to know
-                you a little better.
-            </p>
+            <p>Feel free to reply back whenever you're comfortable. I'd love to talk with you and get to know you a little better.</p>
 
-            <p>
-                No rush at all. Take your time. ♡
-            </p>
+            <p>No rush at all. Take your time. ♡</p>
         `;
 
         yesButton.classList.add("selected-response");
 
-    } else if (choice === "no") {
+    }
+
+
+    // NO RESPONSE
+
+    else if (choice === "no") {
 
         responseMessage.innerHTML = `
-            <p>
-                Thank you for taking the time to read
-                my little book and for being honest
-                with yourself.
-            </p>
+            <p>Thank you for taking the time to read my little book.</p>
 
-            <p>
-                If there's anything you'd like to tell me
-                or share about your thoughts, you're welcome
-                to message me. I'd appreciate hearing from
-                you, but please don't feel that you owe me
-                an explanation or a reply.
-            </p>
+            <p>If there's anything you'd like to tell me or share about your thoughts, you're welcome to message me. But please don't feel like you owe me an explanation or a reply.</p>
 
-            <p>
-                Whatever your answer, I'll respect it.
-                I sincerely wish you well. ♡
-            </p>
+            <p>Whatever your answer, I'll respect it. I sincerely wish you well. ♡</p>
         `;
 
         noButton.classList.add("selected-response");
 
     }
 
+
     // Reveal the message.
 
     responseMessage.style.display = "block";
 
+
+    // Scroll to the response.
+
     responseMessage.scrollIntoView({
+
         behavior: "smooth",
+
         block: "center"
+
     });
 
 }
 
 
-
 /* =====================================================
-   9. CLEAR RESPONSE
+   8. CLEAR RESPONSE
 ===================================================== */
 
 function clearResponse() {
-
 
     // Reset the response lock.
 
@@ -271,11 +264,10 @@ function clearResponse() {
 
 
 /* =====================================================
-   10. KEYBOARD NAVIGATION
+   9. KEYBOARD NAVIGATION
 ===================================================== */
 
 document.addEventListener("keydown", function (event) {
-
 
     // Right arrow.
 
@@ -298,7 +290,7 @@ document.addEventListener("keydown", function (event) {
 
 
 /* =====================================================
-   11. INITIALIZE BOOK
+   10. INITIALIZE BOOK
 ===================================================== */
 
 showPage(0);

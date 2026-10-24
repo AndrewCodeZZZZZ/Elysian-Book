@@ -230,6 +230,16 @@ h2 {
 }
 
 
+/* Images inside placeholders: show the entire image without cropping */
+.image-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+
 /* Cover image area */
 
 .cover-flower {
@@ -242,13 +252,25 @@ h2 {
 }
 
 
+
 /* Chapter illustrations */
 
 .chapter-image {
-    max-width: 280px;
-
-    height: 150px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px auto 30px;
+    overflow: visible;
 }
+
+.chapter-image .chapter-flower {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
 
 
 /* Elysia cosplay image */
@@ -310,24 +332,41 @@ h2 {
 }
 
 
-.flower-decoration::before {
 
+.flower-decoration::before {
     content: "❀";
 
     position: absolute;
-
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%);
+    transform-origin: center center;
 
     font-size: 70px;
-
     color: #d7a6ae;
-
     opacity: 0.7;
 
+    animation: flowerSpin 18s linear infinite;
 }
+
+@keyframes flowerSpin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .flower-decoration::before {
+        animation: none;
+    }
+}
+
 
 
 /* =====================================================
@@ -773,6 +812,16 @@ button {
     }
 
 
+    /* Keep the Hello paper proportional on small screens */
+    .chapter-image {
+        height: auto;
+    }
+
+    .chapter-image .chapter-flower {
+        height: auto;
+    }
+
+
     .cover-flower {
 
         height: 120px;
@@ -981,4 +1030,49 @@ button {
 
     }
 
+}
+/* Three flowers on the final page */
+.final-flowers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    margin: 90px auto 75px;
+}
+
+/* Individual flowers */
+.rotating-flower {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: 48px;
+    color: #e4b5bf;
+
+    animation: slow-rotate 18s linear infinite;
+}
+
+/* Rotate slowly */
+@keyframes slow-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Slightly different timing for a natural effect */
+.rotating-flower:nth-child(2) {
+    animation-duration: 24s;
+}
+
+.rotating-flower:nth-child(3) {
+    animation-duration: 20s;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .rotating-flower {
+        animation: none;
+    }
 }
